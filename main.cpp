@@ -107,12 +107,11 @@ class BST{
                         ploc1 = loc1;
                         loc1 = loc1->r_child;
                     }
-                    ploc1->r_child = loc1->l_child;
                     if (loc->l_child == loc1) {
-                        loc1->l_child = nullptr;
                         loc1->r_child = loc->r_child;
                     }
                     else{
+                        ploc1->r_child = loc1->l_child;
                         loc1->l_child = loc->l_child;
                         loc1->r_child = loc->r_child;
                     }
@@ -145,12 +144,11 @@ class BST{
                         ploc1 = loc1;
                         loc1 = loc1->r_child;
                     }
-                    ploc1->r_child = loc1->l_child;
                     if (loc->l_child == loc1) {
-                        loc1->l_child = nullptr;
                         loc1->r_child = loc->r_child;
                     }
                     else{
+                        ploc1->r_child = loc1->l_child;
                         loc1->l_child = loc->l_child;
                         loc1->r_child = loc->r_child;
                     }
@@ -186,16 +184,14 @@ class BST{
                         ploc1 = loc1;
                         loc1 = loc1->r_child;
                     }
-                    ploc1->r_child = loc1->l_child;
                     if (loc->l_child == loc1) {
-                        loc1->l_child = nullptr;
                         loc1->r_child = loc->r_child;
                     }
                     else{
+                        ploc1->r_child = loc1->l_child;
                         loc1->l_child = loc->l_child;
                         loc1->r_child = loc->r_child;
                     }
-                                   
                     delete loc;
                     loc = nullptr;
                     ploc->l_child = loc1;
@@ -242,14 +238,16 @@ class BST{
 int main() {
     
     BST b;
-    b.insertValue(50);
+    
     b.insertValue(30);
+    b.insertValue(50);
     b.insertValue(20);
-    b.insertValue(35);
-    b.insertValue(25);
-    b.insertValue(70);
-    b.insertValue(60);
+////    b.insertValue(35);
+//    b.insertValue(19);
+//    b.insertValue(18);
+////    b.insertValue(70);
+////    b.insertValue(60);
     b.print();
-    b.remove(60);
+    b.remove(30);
     b.print();
 }
