@@ -234,20 +234,3 @@ class BST{
     }
     
 };
-
-int main() {
-    
-    BST b;
-    
-    b.insertValue(30);
-    b.insertValue(50);
-    b.insertValue(20);
-////    b.insertValue(35);
-//    b.insertValue(19);
-//    b.insertValue(18);
-////    b.insertValue(70);
-////    b.insertValue(60);
-    b.print();
-    b.remove(30);
-    b.print();
-}
